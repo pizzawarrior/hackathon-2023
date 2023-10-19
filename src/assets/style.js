@@ -25,6 +25,7 @@ export const PictureDiv = styled.div`
 
     img {
         width: 20vw;
+        height: 25vh;
     }
     .bottom {
         font-size: 35px;
