@@ -1,13 +1,13 @@
 // import React from 'react'
 import axios from 'axios';
 import { HomeContainer, PictureRow, PictureDiv } from '../assets/style';
-import { WAVES_API_KEY } from '../../secrets';
 import Cloudbreak from '../assets/Cloudbreak.jpg';
 import Mavs from '../assets/Mavs.jpg';
 import Nazare from '../assets/Nazare.jpg';
 import Pipeline from '../assets/Pipeline.jpg';
 import PuertoEscondido from '../assets/PuertoEscondido.jpg';
 import Teahupoo from '../assets/Teahupoo.jpg';
+
 
 const Home = () => {
     const findWaves = (lat, lng) => {
