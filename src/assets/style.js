@@ -49,3 +49,20 @@ export const H1 = styled.h1`
     font-size: 56px;
     color: white;
 `;
+
+
+export const Modal = styled.div`
+    position: absolute;
+    left: 33vw;
+    background-color: white;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #306bac;
+    border-radius: 8px;
+
+    img {
+        width: 25vw;
+        height: auto;
+    }
+`;
