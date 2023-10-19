@@ -1,29 +1,52 @@
-// import React from 'react'
+import { useState } from 'react'
 import axios from 'axios';
-import { HomeContainer, PictureRow, PictureDiv } from '../assets/style';
+import { HomeContainer, PictureRow, PictureDiv, Modal } from '../assets/style';
+import { WEATHER_API_KEY, PEXELS_API_KEY } from '../../secrets';
 import Cloudbreak from '../assets/Cloudbreak.jpg';
 import Mavs from '../assets/Mavs.jpg';
 import Nazare from '../assets/Nazare.jpg';
 import Pipeline from '../assets/Pipeline.jpg';
 import PuertoEscondido from '../assets/PuertoEscondido.jpg';
 import Teahupoo from '../assets/Teahupoo.jpg';
-
+import happypic from '../assets/happy.jpg'
 
 const Home = () => {
-    const findWaves = (lat, lng) => {
+    const [showModal, setShowModal] = useState(false)
+    const [happy, setHappy] = useState(false)
+    const [image, setImage] = useState('')
+    image
+
+    const findImage = (mood) => {
         axios
-            .get(
-                `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=waveHeight`,
-                {
-                    headers: {
-                        Authorization: WAVES_API_KEY,
-                    },
-                }
+          .get(`https://api.pexels.com/v1/search?query=${mood}&per_page=1`, {
+            headers: {
+              Authorization: PEXELS_API_KEY,
+            },
+          })
+          .then(({data}) => setImage(data.photos[0].url));
+      };
+
+
+    const findWaves = (lat, lon) => {
+        axios
+            .get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${WEATHER_API_KEY}`
             )
-            .then((data) => console.log(data));
+            .then(({data}) => {
+                data.wind.speed <= 10 && setHappy(true)
+                let the_mood = happy ? 'happy' : 'sad'
+                findImage(the_mood)
+                setShowModal(true)
+            });
     };
+
+
     return (
         <HomeContainer>
+            {showModal && <Modal>
+                {happy ? 'Firing!' : "Not Firing"}
+                <img src={happypic} alt="test" />
+                <button onClick={() => setShowModal(false)}>Close</button>
+            </Modal>}
             <PictureRow>
                 <PictureDiv
                     onClick={() => findWaves(-17.8537111, 177.20084722222222)}
@@ -35,7 +58,7 @@ const Home = () => {
                     <div className='bottom'>Cloudbreak</div>
                 </PictureDiv>
 
-                <PictureDiv>
+                <PictureDiv onClick={() => findWaves(37.491958, -122.500584)}>
                     <img
                         src={Mavs}
                         alt='beach'
@@ -43,7 +66,7 @@ const Home = () => {
                     <div className='bottom'>Mavericks</div>
                 </PictureDiv>
 
-                <PictureDiv>
+                <PictureDiv onClick={() => findWaves(39.601875,-9.071212)}>
                     <img
                         src={Nazare}
                         alt='beach'
@@ -53,7 +76,7 @@ const Home = () => {
             </PictureRow>
 
             <PictureRow>
-                <PictureDiv>
+                <PictureDiv onClick={() => findWaves(21.664019,-158.053852)}>
                     <img
                         src={Pipeline}
                         alt='beach'
@@ -61,14 +84,14 @@ const Home = () => {
                     <div className='bottom'>Pipeline</div>
                 </PictureDiv>
 
-                <PictureDiv>
+                <PictureDiv onClick={() => findWaves(15.87037,-97.07726)}>
                     <img
                         src={PuertoEscondido}
                         alt='beach'
                     />
                     <div className='bottom'>Puerto Escondido</div>
                 </PictureDiv>
-                <PictureDiv>
+                <PictureDiv onClick={() => findWaves(-17.8416633, -149.266998932)}>
                     <img
                         src={Teahupoo}
                         alt='beach'
