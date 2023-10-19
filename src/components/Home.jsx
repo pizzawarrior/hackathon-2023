@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios';
 import { HomeContainer, PictureRow, PictureDiv, Modal } from '../assets/style';
-import { WEATHER_API_KEY, PEXELS_API_KEY } from '../../secrets';
+import { WEATHER_API_KEY, PEXELS_API_KEY } from '../secrets';
 import Cloudbreak from '../assets/Cloudbreak.jpg';
 import Mavs from '../assets/Mavs.jpg';
 import Nazare from '../assets/Nazare.jpg';
@@ -14,7 +14,6 @@ const Home = () => {
     const [showModal, setShowModal] = useState(false)
     const [happy, setHappy] = useState(false)
     const [image, setImage] = useState('')
-    image
 
     const findImage = (mood) => {
         axios
@@ -23,7 +22,8 @@ const Home = () => {
               Authorization: PEXELS_API_KEY,
             },
           })
-          .then(({data}) => setImage(data.photos[0].url));
+          .then(({data}) => setImage(data.photos[0].src.original));
+          console.log(image)
       };
 
 
@@ -32,21 +32,39 @@ const Home = () => {
             .get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${WEATHER_API_KEY}`
             )
             .then(({data}) => {
-                data.wind.speed <= 10 && setHappy(true)
-                let the_mood = happy ? 'happy' : 'sad'
-                findImage(the_mood)
+                let mood;
+                if (data.wind.speed <= 10) {
+                mood = 'happy';
+                setHappy(true);
+            } else {
+                mood = 'sad';
+                setHappy(false);
+            }
+                console.log(mood)
+                findImage(mood)
                 setShowModal(true)
+                console.log(data.wind.speed)
             });
     };
 
 
     return (
         <HomeContainer>
+
             {showModal && <Modal>
                 {happy ? 'Firing!' : "Not Firing"}
-                <img src={happypic} alt="test" />
-                <button onClick={() => setShowModal(false)}>Close</button>
+                <img src={image} alt="test" />
+                <button
+                onClick={() => {
+                    setShowModal(false);
+                    setHappy(false);
+                    }
+                }
+                >
+                    Close
+                    </button>
             </Modal>}
+
             <PictureRow>
                 <PictureDiv
                     onClick={() => findWaves(-17.8537111, 177.20084722222222)}
