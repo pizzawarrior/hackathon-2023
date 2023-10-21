@@ -1,12 +1,20 @@
 
-
 ## :fire: Is It Firing? :fire:
 
-The concept for this project is a web-app for people in the surf industry to use. Users can access the site and click on images of 6 of the top big-wave surfing destinations of the world. Using the Open Weather API, the page pulls in weather data, and based on the favorability of the condisions displays a random image (from the Pexels API,) of 'happy,' :smiley: if the conditions are favorable, or 'sad,' :cry: if the conditions are not. 
+The concept for this project is a web-app for global surfing enthusiasts to use. Users can access the site and click on images of 6 of the top big-wave surfing destinations of the world. Using the Open Weather API, the page pulls in weather data, and based on the favorability of the condisions displays a random image (from the Pexels API,) of 'happy,' :smiley: if the conditions are favorable, or 'sad,' :cry: if the conditions are not. 
 
 This project is the product of a Hackathon in the Hack Reactor full-stack web development bootcamp in the summer of 2023. 
 
 The criteria was to build a React project using 2 different API's to pull in data, and we had 2.5 hrs to conceptualize, build, test, and present it. Our team consisted of 2 people: myself, and @spidergrrljess.
+
+Big Wave Spots Include:
+* Nazare, Portugal
+* Cloudbreak, Fiji
+* Mavericks, California
+* Pipeline, Hawaii
+* Puerto Escondido, Mexico
+* Tehapo'o, Tahiti
+
 
 <br>
 
