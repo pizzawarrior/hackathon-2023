@@ -15,15 +15,22 @@ const Home = () => {
   const [happy, setHappy] = useState(false);
   const [image, setImage] = useState("");
 
+
+  // const findImage = (mood, randomIndex) => {
   const findImage = (mood) => {
+
     axios
-      .get(`https://api.pexels.com/v1/search?query=${mood}&per_page=1`, {
+      .get(`https://api.pexels.com/v1/search?query=${mood}`, {
         headers: {
           Authorization: PEXELS_API_KEY,
         },
       })
-      .then(({ data }) => setImage(data.photos[0].src.original));
-    console.log(image);
+      .then(({ data }) => {
+        const randomIndex = Math.floor(Math.random() * data.photos.length);
+        // console.log(randomIndex)
+
+        setImage(data.photos[randomIndex].src.original)
+    });
   };
 
   const findWaves = (lat, lon) => {
@@ -41,7 +48,7 @@ const Home = () => {
           mood = "sad";
           setHappy(false);
         }
-        console.log(mood);
+        // console.log(mood);
         findImage(mood);
         setShowModal(true);
         console.log(data.wind.speed);
