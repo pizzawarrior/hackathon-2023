@@ -4,7 +4,7 @@ The concept for this project is a web-app for global surfing enthusiasts to use.
 
 This project is the product of a Hackathon in the Hack Reactor full-stack web development bootcamp in the summer of 2023. 
 
-The criteria was to build a React project using 2 different API's to pull in data, and we had 2.5 hrs to conceptualize, build, test, and present it. Our team consisted of 2 people: myself, and @spidergrrljess.
+The criteria was to build a React project using 2 different API's to pull in data, and we had 2.5 hrs to conceptualize, build, test, and present it. Our team consisted of 2 people: myself, and @spiderthatcodes.
 
 Big Wave Spots Include:
 * Nazare, Portugal
