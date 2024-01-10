@@ -26,7 +26,7 @@ Jessica:
 
 Ian:
 * project concept
-* api research and testing
+* API research and testing
 * React component refactoring
 * QC and testing
 
