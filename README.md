@@ -2,12 +2,7 @@
 
 ### About:
 The concept for this project is a web-app for global surfing enthusiasts to use. Users can access the site and click on images of 6 of the top big-wave surfing destinations of the world. Using the Open Weather API, the page pulls in weather data, and based on the favorability of the condisions displays a random image (from the Pexels API,) of 'happy,' :smiley: if the conditions are favorable, or 'sad,' :cry: if the conditions are not.
-
-### Criteria
-- Must use 2 different API's to pull in data
-- Time Limit: 2.5 hrs to conceptualize, build, test, and present
-- Team project: myself, and @spidergrrljess.
-
+</br>
 Big Wave Spots Include:
 * Nazare, Portugal
 * Cloudbreak, Fiji
@@ -16,7 +11,10 @@ Big Wave Spots Include:
 * Puerto Escondido, Mexico
 * Tehapo'o, Tahiti
 
-<br>
+### Criteria
+- Must use 2 different API's to pull in data
+- Time Limit: 2.5 hrs to conceptualize, build, test, and present
+- Team project: myself, and @spidergrrljess.
 
 ### Team Member Roles
 Jessica:
