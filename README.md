@@ -43,11 +43,14 @@ Ian:
 ## Demo
 
 Home Page:
+<img width="1610" alt="Home" src="https://github.com/pizzawarrior/hackathon-2023/assets/94874182/2a6d8c62-b9be-4c72-a473-f0454fffd2c5">
 
-![Screenshot_2023-10-21_at_11.32.55_AM](/uploads/9554ed88916a4ba76d96677dfd7893e0/Screenshot_2023-10-21_at_11.32.55_AM.png)
+<br>
+
+The display for favorable conditions:
+<img width="1612" alt="Happy" src="https://github.com/pizzawarrior/hackathon-2023/assets/94874182/93b8e22b-5486-459b-9b97-ca656ea9a2b6">
 
 <br>
 
 The display for unfavorable conditions:
-
 <img width="1612" alt="Sad" src="https://github.com/pizzawarrior/hackathon-2023/assets/94874182/3c8ef7bd-eb0c-4c0a-bf64-7c5f93020804">
