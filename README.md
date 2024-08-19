@@ -1,7 +1,8 @@
 ## :fire: Hackathon Submission: Is It Firing? :fire:
 
 ### About:
-The concept for this project is a web-app for global surfing enthusiasts to use. Users can access the site and click on images of 6 of the top big-wave surfing destinations of the world. Using the Open Weather API, the page pulls in weather data, and based on the favorability of the condisions displays a random image (from the Pexels API,) of 'happy,' :smiley: if the conditions are favorable, or 'sad,' :cry: if the conditions are not.
+The concept for this project is a web-app for global surfing enthusiasts to use. Users can access the site and click on images of 6 of the top big-wave surfing destinations of the world. Using the Open Weather API, the page pulls in weather data, and based on the favorability of the conditions displays a random image (from the Pexels API,) of 'happy,' :smiley: if the conditions are favorable, or 'sad,' :cry: if the conditions are not.
+
 </br>
 Big Wave Spots Include:
 * Nazare, Portugal
@@ -16,16 +17,22 @@ Big Wave Spots Include:
 - Time Limit: 2.5 hrs to conceptualize, build, test, and present
 - Team project: myself, and @spidergrrljess.
 
+### THis Project Is Made With:
+- Django
+- React
+- Vite
+- Styled Components
+- Axios
+
 ### Team Member Roles
 Jessica:
-* laying down a React baseline code structure
+* initial React component structure
 * throwing together a quick UI to present content in a clear way
-* initial logic and component structure
-* api testing
+* API testing
 
 Ian:
 * project concept
-* api research and testing
+* API research, integration, and testing
 * React component refactoring
 * QC and testing
 
