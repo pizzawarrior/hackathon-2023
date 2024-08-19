@@ -1,21 +1,22 @@
 ## :fire: Hackathon Submission: Is It Firing? :fire:
 
 ### About:
-The concept for this project is a web-app for global surfing enthusiasts to use. Users can access the site and click on images of 6 of the top big-wave surfing destinations of the world. Using the Open Weather API, the page pulls in weather data, and based on the favorability of the conditions displays a random image (from the Pexels API,) of 'happy,' :smiley: if the conditions are favorable, or 'sad,' :cry: if the conditions are not.
-
+The concept for this project is a web-app for global surfing enthusiasts to use. Users can access the site and click on images of 6 of the top big-wave surfing destinations of the world to check current surf conditions.
+Using the Open Weather API, the page pulls in weather data, and based on the favorability of the conditions displays a random image (from the Pexels API,) of 'happy,' :smiley: if the conditions are favorable, or 'sad,' :cry: if the conditions are not.
 </br>
+
 Big Wave Spots Include:
-* Nazare, Portugal
-* Cloudbreak, Fiji
-* Mavericks, California
-* Pipeline, Hawaii
-* Puerto Escondido, Mexico
-* Tehapo'o, Tahiti
+- Nazare, Portugal
+- Cloudbreak, Fiji
+- Mavericks, California
+- Pipeline, Hawaii
+- Puerto Escondido, Mexico
+- Tehapo'o, Tahiti
 
 ### Criteria
 - Must use 2 different API's to pull in data
 - Time Limit: 2.5 hrs to conceptualize, build, test, and present
-- Team project: myself, and @spidergrrljess.
+- Team project: myself, working with @spidergrrljess.
 
 ### This Project Is Made With:
 - Django
