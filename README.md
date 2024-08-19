@@ -17,7 +17,7 @@ Big Wave Spots Include:
 - Time Limit: 2.5 hrs to conceptualize, build, test, and present
 - Team project: myself, and @spidergrrljess.
 
-### THis Project Is Made With:
+### This Project Is Made With:
 - Django
 - React
 - Vite
